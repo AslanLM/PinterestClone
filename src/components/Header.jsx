@@ -48,7 +48,7 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a href="">by: LM</a>
+        <a href="https://github.com/AslanLM/PinterestClone" target="_blank">by:LM</a>
         </li>
       </ul>
     </header>
