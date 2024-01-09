@@ -46,9 +46,6 @@ const Main = () => {
       });
   }
 
-  console.log('result', images)
-  console.log('value', val)
-
   return (
     <main>
 
