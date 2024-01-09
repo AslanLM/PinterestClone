@@ -89,6 +89,11 @@ header ul li input:focus {
   outline: 4px solid #0084ff80;
 }
 
+@media screen and (max-width: 480px){
+  header ul li:nth-child(3){
+    display: none;
+  }
+}
 
 
 /* conteten mazonry */
