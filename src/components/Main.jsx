@@ -3,6 +3,7 @@ import { createApi } from "unsplash-js";
 import Masonry from "@mui/lab/Masonry";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useBookStore } from "../store/bookStore";
+import Loading from "./Loading";
 
 
 const api = createApi({
@@ -53,7 +54,7 @@ const Main = () => {
         dataLength={images.length}
         hasMore={hasMore}
         next={moreImages}
-        loader={<h4>Loading...</h4>}
+        loader={<Loading/>}
         style={{ overflow: 'hidden' }}
       >
 
@@ -65,7 +66,7 @@ const Main = () => {
           {images.map((image) => (
             <div key={image.id} className="item">
               <div className="image">
-                <img src={image.urls.small} alt={image.alt_description} />
+                <img src={image.urls.small} alt={image.alt_description}  loading="lazy"/>
                 <a className="btn-save" href="">Save</a>
                 <a className="icon-upload" href=""><img src="/uploadicon.png" alt="upload" /></a>
                 <a className="icon-dots" href=""><img src="/dotsicon.png" alt="options" /></a>
