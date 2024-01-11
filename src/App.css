@@ -8,6 +8,7 @@
 header {
   margin-bottom: 10px;
   padding: 5px 0;
+  z-index: 2;
 }
 
 header ul {
@@ -102,8 +103,10 @@ header ul li input:focus {
 .masonry img {
   width: 100%;
   object-fit: cover;
-  /* height: 100%; */
   border-radius: 15px;
+ /* animation: reveal-img linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%; */
 }
 
 .masonry .item p {
@@ -203,6 +206,16 @@ header ul li input:focus {
 .infinite-scroll-component{
   overflow: hidden;
 }
+
+@keyframes reveal-img {
+  from{
+    opacity: 0;
+  }
+  top{
+    opacity: 1;
+  }
+}
+
 
 
 /* loading */

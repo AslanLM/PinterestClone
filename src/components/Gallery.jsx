@@ -10,7 +10,7 @@ const api = createApi({
   accessKey: import.meta.env.VITE_ACESSKEY,
 });
 
-const Main = () => {
+const Gallery = () => {
   const [images, setImages] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   let index = useRef(1);
@@ -86,4 +86,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Gallery;
